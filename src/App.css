@@ -1,10 +1,12 @@
 body {
   padding: 10px 100px;
 }
+
 section ul {
   padding: 0;
   list-style: none;
 }
+
 section ul li {
   border: 2px solid gray;
   margin: 5px 0;
