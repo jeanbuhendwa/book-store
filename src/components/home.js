@@ -1,34 +1,37 @@
-const HomePage = () => (
-  <>
-    <main>
-      <section>
-        <article>
-          <h2>The Hunger Games</h2>
-          <p>Suzanne Collins</p>
-        </article>
-        <article>
-          <h2>Capital in the Twenty-First Century</h2>
-          <p>Suzanne Collins</p>
-        </article>
-        <article>
-          <h2>Dune</h2>
-          <p>Frank Herbert</p>
-        </article>
-      </section>
-      <div>
-        <h2>ADD NEW BOOK</h2>
-        <form>
-          <input type="text" placeholder="Book title" />
-          <select>
-            <option>Action</option>
-            <option>Economy</option>
-            <option>Sciences</option>
-          </select>
-          <button type="button">ADD BOOK</button>
-        </form>
-      </div>
-    </main>
-  </>
-);
+import { useDispatch, useSelector } from 'react-redux';
+import AddBook from './bookForm';
+import { removeBook } from '../redux/books/bookSlice';
+
+const HomePage = () => {
+  const books = useSelector((state) => state.book.bookItem);
+  const dispach = useDispatch();
+  return (
+    <>
+      <main>
+        <section>
+          <h2>Books</h2>
+          <ul>
+            {books.map((book) => (
+              <li key={book.id}>
+                <p>{book.category}</p>
+                <h3>{book.title}</h3>
+                <p>{book.author}</p>
+                <button
+                  type="button"
+                  onClick={() => dispach(removeBook(book.id))}
+                >
+                  Remove
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <div>
+          <AddBook />
+        </div>
+      </main>
+    </>
+  );
+};
 
 export default HomePage;
