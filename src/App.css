@@ -48,7 +48,7 @@ body {
 
 .navigationMenu div ul .navLink {
   font-size: 0.9rem;
-  font-weight: normal;
+  font-weight: 550;
   font-stretch: normal;
   font-style: normal;
   line-height: normal;
@@ -56,6 +56,22 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   color: #121212;
+}
+
+.bookList li {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 1.5rem 0.7rem;
+  display: grid;
+  grid-template-columns: 45% 25% 20%;
+  gap: 30px;
+}
+
+.navigationMenu div ul li:nth-child(2) {
+  opacity: 0.4;
+  font-weight: 500;
 }
 
 .navigationMenu .userIcon {
@@ -78,22 +94,23 @@ main {
   padding: 0;
 }
 
-.bookList li {
-  background: #fff;
-  border: 1px solid #bbb;
-  border-radius: 5px;
-  margin: 10px 0;
-  padding: 1.5rem 0.7rem;
-  display: grid;
-  grid-template-columns: 45% 25% 20%;
-  gap: 30px;
-}
-
 .bookInfo {
   display: flex;
   flex-direction: column;
   gap: 20px;
   justify-content: center;
+}
+
+.bookInfo .category {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+  margin: 0 0 0.438rem;
 }
 
 .bookList .btns {
