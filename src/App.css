@@ -1,16 +1,274 @@
-body {
-  padding: 10px 100px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
 }
 
-section ul {
-  padding: 0;
+body {
+  background: #e8e8e8;
+}
+
+.navigationMenu {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.navigationMenu div {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin: 0;
+  margin-left: 100px;
+  padding: 5px;
+}
+
+.navigationMenu div p {
+  color: #0290ff;
+  font-size: 1.875rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.navigationMenu div ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
   list-style: none;
 }
 
-section ul li {
-  border: 2px solid gray;
-  margin: 5px 0;
-  padding: 5px;
+.navigationMenu div ul .navLink {
+  font-size: 0.9rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #121212;
+}
+
+.navigationMenu .userIcon {
+  color: #3a88fe;
+  margin: 0;
+  margin-right: 100px;
+  font-size: 1.3rem;
+  border: 1px solid #e8e8e8;
+  padding: 8px 10px;
+  border-radius: 100%;
+}
+
+main {
+  padding: 20px 100px;
+  background: none;
+}
+
+.bookList {
+  list-style: none;
+  padding: 0;
+}
+
+.bookList li {
+  background: #fff;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 1.5rem 0.7rem;
+  display: grid;
+  grid-template-columns: 45% 25% 20%;
+  gap: 30px;
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.bookList .btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.bookList .btns button {
+  background: none;
+  border: none;
+  font-size: 0.775rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+  border-right: 1px solid #e8e8e8;
+  padding-right: 10px;
+}
+
+.bookList li h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  color: #121212;
+}
+
+.bookList li p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #4386bf;
+}
+
+.bookProgress {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-right: 2px solid #e8e8e8;
+  padding-right: 30px;
+}
+
+.Oval {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-image:
+    radial-gradient(closest-side, white 79%, transparent 80%),
+    conic-gradient(from 0deg at center, #307bbe 64%, #e8e8e8 0%);
+}
+
+.bookProgress h4 {
+  margin: 0 0.838rem 0.15rem 0.75rem;
+  font-size: 2rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.bookProgress div p {
+  margin: 0 0.838rem 0.15rem 0.75rem;
+  opacity: 0.5;
+  font-size: 0.875rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.updateProgress {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.updateProgress .currChap {
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: normal;
+  color: #121212;
+}
+
+.updateProgress .chapter {
+  font-size: 1rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.updateProgress .btnProgress {
+  padding: 0.438rem 1.188rem 0.5rem 1.375rem;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  font-size: 0.813rem;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
+}
+
+.addBook {
+  border-top: 2px solid #bdbdbd;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  padding-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 50% 25% 23%;
+  gap: 1%;
+}
+
+input {
+  padding: 10px 18px;
+  border: 1px solid  #bbb;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.15px;
+  color: #7d7d7d;
+}
+
+.addBooBtn {
+  padding: 10px 18px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  border: none;
+  cursor: pointer;
+  font-size: 0.813rem;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: #fff;
 }
 
 .btnStatus {
