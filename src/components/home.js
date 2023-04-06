@@ -38,6 +38,7 @@ const HomePage = () => {
               <li key={book.item_id}>
                 <div className="bookInfo">
                   <div>
+                    <p className="category">Economy</p>
                     <h3>{book.title}</h3>
                     <p>{book.author}</p>
                   </div>
