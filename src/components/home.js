@@ -33,18 +33,39 @@ const HomePage = () => {
     <>
       <main>
         <section>
-          <h2>Books</h2>
-          <ul>
+          <ul className="bookList">
             {books.map((book) => (
               <li key={book.item_id}>
-                <h3>{book.title}</h3>
-                <p>{book.author}</p>
-                <button
-                  type="button"
-                  onClick={() => handelRemove(book.item_id)}
-                >
-                  Remove
-                </button>
+                <div className="bookInfo">
+                  <div>
+                    <h3>{book.title}</h3>
+                    <p>{book.author}</p>
+                  </div>
+                  <div className="btns">
+                    <button type="button">Comment</button>
+                    <button
+                      type="button"
+                      onClick={() => handelRemove(book.item_id)}
+                    >
+                      Remove
+                    </button>
+                    <button type="button">Edit</button>
+                  </div>
+                </div>
+                <div className="bookProgress">
+                  <div className="Oval" />
+                  <div>
+                    <h4>64 %</h4>
+                    <p>Completed</p>
+                  </div>
+                </div>
+                <div className="updateProgress">
+                  <p className="currChap">Current Chapter</p>
+                  <p className="chapter">Chapter 17</p>
+                  <button type="button" className="btnProgress">
+                    Update progress
+                  </button>
+                </div>
               </li>
             ))}
           </ul>
