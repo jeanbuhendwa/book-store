@@ -26,21 +26,26 @@ const AddBook = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input
-        type="text"
-        placeholder="Book title"
-        value={title}
-        onChange={(event) => setTitle(event.target.value)}
-      />
-      <input
-        type="text"
-        placeholder="Author"
-        value={author}
-        onChange={(event) => setAuthor(event.target.value)}
-      />
-      <button type="submit">ADD BOOK</button>
-    </form>
+    <>
+      <h2 className="addBook">ADD NEW BOOK</h2>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Book title"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Author"
+          value={author}
+          onChange={(event) => setAuthor(event.target.value)}
+        />
+        <button type="submit" className="addBooBtn">
+          ADD BOOK
+        </button>
+      </form>
+    </>
   );
 };
 
